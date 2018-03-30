@@ -37,7 +37,10 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        echo "product post";
+        $path = 'resources/assets/image/user.png';
+        print_r($_FILES['file']);
+        $uploaddir = 'resources/assets/image/';
+        echo copy( $_FILES['file']['tmp_name'],$path);
     }
 
     /**
